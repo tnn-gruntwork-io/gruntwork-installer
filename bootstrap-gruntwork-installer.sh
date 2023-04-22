@@ -4,7 +4,7 @@
 #
 # Usage:
 #
-# curl -LsS https://raw.githubusercontent.com/gruntwork-io/gruntwork-installer/v0.0.38/bootstrap-gruntwork-installer.sh | bash /dev/stdin --version v0.0.38
+# curl -LsS https://raw.githubusercontent.com/tnn-gruntwork-io/gruntwork-installer/v0.0.38/bootstrap-gruntwork-installer.sh | bash /dev/stdin --version v0.0.38
 #
 # Rationale:
 #
@@ -24,10 +24,10 @@ readonly BIN_DIR="/usr/local/bin"
 readonly USER_DATA_DIR="/etc/user-data"
 
 readonly DEFAULT_FETCH_VERSION="v0.4.2"
-readonly FETCH_DOWNLOAD_URL_BASE="https://github.com/gruntwork-io/fetch/releases/download"
+readonly FETCH_DOWNLOAD_URL_BASE="https://github.com/tnn-gruntwork-io/fetch/releases/download"
 readonly FETCH_INSTALL_PATH="$BIN_DIR/fetch"
 
-readonly GRUNTWORK_INSTALLER_DOWNLOAD_URL_BASE="https://raw.githubusercontent.com/gruntwork-io/gruntwork-installer"
+readonly GRUNTWORK_INSTALLER_DOWNLOAD_URL_BASE="https://raw.githubusercontent.com/tnn-gruntwork-io/gruntwork-installer"
 readonly GRUNTWORK_INSTALLER_INSTALL_PATH="$BIN_DIR/gruntwork-install"
 readonly GRUNTWORK_INSTALLER_SCRIPT_NAME="gruntwork-install"
 
@@ -51,7 +51,7 @@ function print_usage {
   echo "    bootstrap-gruntwork-installer.sh --version v0.0.38"
   echo
   echo "  One-liner to download this bootstrap script from GitHub and run it to install version v0.0.38:"
-  echo "    curl -Ls https://raw.githubusercontent.com/gruntwork-io/gruntwork-installer/v0.0.38/bootstrap-gruntwork-installer.sh | bash /dev/stdin --version v0.0.38"
+  echo "    curl -Ls https://raw.githubusercontent.com/tnn-gruntwork-io/gruntwork-installer/v0.0.38/bootstrap-gruntwork-installer.sh | bash /dev/stdin --version v0.0.38"
 }
 
 function maybe_sudo {
@@ -211,7 +211,7 @@ The /etc/user-data folder contains scripts that should be executed while an EC2 
 User Data (http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html) configuration.
 
 This folder is not an industry standard, but a convention we use at  Gruntwork (http://www.gruntwork.io) make User Data
-scripts manageable. Many of the modules in Script Modules (https://github.com/gruntwork-io/script-modules) need not
+scripts manageable. Many of the modules in Script Modules (https://github.com/tnn-gruntwork-io/script-modules) need not
 only to be installed, but also to execute while a server is booting, and instead of scattering them in random locations
 all over the file system, /etc/user-data gives us a single, common place to put them all.
 EOF
