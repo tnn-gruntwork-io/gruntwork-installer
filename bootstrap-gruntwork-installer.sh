@@ -24,7 +24,7 @@ readonly BIN_DIR="/usr/local/bin"
 readonly USER_DATA_DIR="/etc/user-data"
 
 readonly DEFAULT_FETCH_VERSION="v0.4.2"
-readonly FETCH_DOWNLOAD_URL_BASE="https://github.com/tnn-gruntwork-io/fetch/releases/download"
+readonly FETCH_DOWNLOAD_URL_BASE="https://github.com/gruntwork-io/fetch/releases/download"
 readonly FETCH_INSTALL_PATH="$BIN_DIR/fetch"
 
 readonly GRUNTWORK_INSTALLER_DOWNLOAD_URL_BASE="https://raw.githubusercontent.com/tnn-gruntwork-io/gruntwork-installer"
