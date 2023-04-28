@@ -4,7 +4,7 @@
 #
 # Usage:
 #
-# curl -LsS https://raw.githubusercontent.com/tnn-gruntwork-io/gruntwork-installer/v0.0.38/bootstrap-gruntwork-installer.sh | bash /dev/stdin --version v0.0.38
+# curl -LsS https://raw.githubusercontent.com/gruntwork-io/gruntwork-installer/v0.0.38/bootstrap-gruntwork-installer.sh | bash /dev/stdin --version v0.0.38
 #
 # Rationale:
 #
@@ -51,7 +51,7 @@ function print_usage {
   echo "    bootstrap-gruntwork-installer.sh --version v0.0.38"
   echo
   echo "  One-liner to download this bootstrap script from GitHub and run it to install version v0.0.38:"
-  echo "    curl -Ls https://raw.githubusercontent.com/tnn-gruntwork-io/gruntwork-installer/v0.0.38/bootstrap-gruntwork-installer.sh | bash /dev/stdin --version v0.0.38"
+  echo "    curl -Ls https://raw.githubusercontent.com/gruntwork-io/gruntwork-installer/v0.0.38/bootstrap-gruntwork-installer.sh | bash /dev/stdin --version v0.0.38"
 }
 
 function maybe_sudo {
