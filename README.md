@@ -17,7 +17,7 @@ Our solution is to make the `gruntwork-install` tool open source and to publish 
 script that anyone can use to install `gruntwork-install` itself. To use it, execute the following:
 
 ```
-curl -LsS https://raw.githubusercontent.com/gruntwork-io/gruntwork-installer/v0.0.38/bootstrap-gruntwork-installer.sh | bash /dev/stdin --version v0.0.38
+curl -LsS https://raw.githubusercontent.com/tnn-gruntwork-io/gruntwork-installer/v0.0.38/bootstrap-gruntwork-installer.sh | bash /dev/stdin --version v0.0.38
 ```
 
 Notice the `--version` parameter at the end where you specify which version of `gruntwork-install` to install. See the
@@ -44,7 +44,7 @@ Once that environment variable is set, you can run `gruntwork-install` with the 
 Option                      | Required | Description
 --------------------------- | -------- | ------------
 `--repo`                    | Yes      | The GitHub repo to install from.
-`--tag`                     | Yes      | The version of the `--repo` to install from.<br>Follows the syntax described at [Tag Constraint Expressions](https://github.com/gruntwork-io/fetch#tag-constraint-expressions). This value is exposed to module install scripts as GRUNTWORK_INSTALL_TAG.
+`--tag`                     | Yes      | The version of the `--repo` to install from.<br>Follows the syntax described at [Tag Constraint Expressions](https://github.com/tnn-gruntwork-io/fetch#tag-constraint-expressions). This value is exposed to module install scripts as GRUNTWORK_INSTALL_TAG.
 `--module-name`             | XOR      | The name of a module to install.<br>Can be any folder within the `modules` directory of `--repo`.<br>You must specify exactly one of `--module-name` or `--binary-name`.
 `--binary-name`             | XOR      | The name of a binary to install.<br>Can be any file uploaded as a release asset in `--repo`.<br>You must specify exactly one of `--module-name` or `--binary-name`.
 `--binary-sha256-checksum`  | No       | The SHA256 checksum of the binary specified by `--binary-name`. Should be exactly 64 characters..
@@ -117,7 +117,7 @@ and then uses it to install several modules:
     {
       "type": "shell",
       "inline":
-        "curl -Ls https://raw.githubusercontent.com/gruntwork-io/gruntwork-installer/v0.0.38/bootstrap-gruntwork-installer.sh | bash /dev/stdin --version v0.0.16"
+        "curl -Ls https://raw.githubusercontent.com/tnn-gruntwork-io/gruntwork-installer/v0.0.38/bootstrap-gruntwork-installer.sh | bash /dev/stdin --version v0.0.16"
     },
     {
       "type": "shell",
@@ -177,7 +177,7 @@ Some Script Modules are so common that we've made them freely available in the [
 
 `gruntwork-install` helps you install a Gruntwork Module. Here's how it works:
 
-1. It uses [fetch](https://github.com/gruntwork-io/fetch) to download the specified version of the scripts or binary from
+1. It uses [fetch](https://github.com/tnn-gruntwork-io/fetch) to download the specified version of the scripts or binary from
 the (public or private) git repo specified via the `--repo` option.
 1. You need to specify either a module name or a binary name. 
   - If you use the `--module-name` parameter, it downloads the files from the `modules` folder of `--repo` and runs
